@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/Twinkle Twinkle Little Star (Base).unity
+  isLoaded: 1
+  isActive: 1

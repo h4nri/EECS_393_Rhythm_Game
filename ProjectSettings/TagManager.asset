@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Note
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 669794511
+    locked: 0
+  - name: Lanes
+    uniqueID: 3828674705
+    locked: 0
+  - name: Timing Notes
+    uniqueID: 1194616941
+    locked: 0
+  - name: Links
+    uniqueID: 4238137167
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
