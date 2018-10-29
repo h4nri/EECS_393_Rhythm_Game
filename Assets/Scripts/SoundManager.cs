@@ -14,14 +14,13 @@ public class SoundManager : MonoBehaviour {
 		audioClip = audioSource.clip;
 		clipLength = audioClip.length;
 
-		print ("Clip Length: " + clipLength);
+		//print ("Clip Length: " + clipLength);
 	}
 
 	void Update () {
-		print ("Time: " + Time.timeSinceLevelLoad);
+		// print ("Time: " + Time.timeSinceLevelLoad);
 
-		if (Time.timeSinceLevelLoad - clipLength > 0) {
-
+		if (Time.timeSinceLevelLoad - clipLength > 0.0f) {
 			StartCoroutine ("EndLevel");
 		}
 	}

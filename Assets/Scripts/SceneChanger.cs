@@ -26,6 +26,6 @@ public class SceneChanger : MonoBehaviour {
 	}
 
 	public void PlayTwinkleTwinkleLittleStar() {
-		SceneManager.LoadScene("Twinkle Twinkle Little Star (Base)");
+		SceneManager.LoadScene("Twinkle Twinkle Little Star");
 	}
 }

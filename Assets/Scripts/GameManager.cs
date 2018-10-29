@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	GameObject scoreManager;
 	GradeSprite gradeSprite;
+	ScoreManager scoreManager;
 
 	void Start () {
-		scoreManager = GameObject.Find ("ScoreManager");
-		gradeSprite = GameObject.Find ("Grade Image").GetComponent<GradeSprite> ();
+		gradeSprite = GameObject.Find ("Grade Sprite").GetComponent<GradeSprite> ();
+		scoreManager = GameObject.Find ("Score Manager").GetComponent<ScoreManager> ();
 	}
 
 	void Update () {
@@ -19,6 +19,6 @@ public class GameManager : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		Destroy (coll.gameObject);
 		gradeSprite.SetSprite ("Miss");
-		scoreManager.GetComponent<ScoreManager> ().EndStreak ();
+		scoreManager.EndStreak ();
 	}
 }

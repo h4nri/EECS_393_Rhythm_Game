@@ -6,17 +6,22 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
 	GradeSprite gradeSprite;
+	float areaOfOverlap;
+	float overlapPercentage;
 	int multiplier;
 	int score;
 	int streak;
-	float areaOfOverlap;
-	float overlapPercentage;
 
-	void Start () {
-		gradeSprite = GameObject.Find ("Grade Image").GetComponent<GradeSprite> ();
+	void Awake () {
+		areaOfOverlap = 0.0f;
+		overlapPercentage = 0.0f;
 		multiplier = 1;
 		score = 0;
 		streak = 0;
+	}
+
+	void Start () {
+		gradeSprite = GameObject.Find ("Grade Sprite").GetComponent<GradeSprite> ();
 	}
 
 	void Update () {
@@ -24,10 +29,10 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	public void AddScore(float distance) {
-		areaOfOverlap = (2 * Mathf.Pow(0.5f, 2.0f) * Mathf.Acos (distance / (2 * 0.5f))) - ((distance / 2) * (Mathf.Sqrt (4 * Mathf.Pow(0.5f, 2.0f)) - Mathf.Pow(distance, 2.0f)));
+		areaOfOverlap = (2.0f * Mathf.Pow(0.5f, 2.0f) * Mathf.Acos (distance / (2.0f * 0.5f))) - ((distance / 2.0f) * (Mathf.Sqrt (4.0f * Mathf.Pow(0.5f, 2.0f)) - Mathf.Pow(distance, 2.0f)));
 		overlapPercentage = areaOfOverlap / (Mathf.PI * Mathf.Pow(0.5f, 2.0f));
 
-		print ("Overlap percentage: " + overlapPercentage);
+		//print ("Overlap Percentage: " + overlapPercentage);
 
 		if ((overlapPercentage <= 1.0f) && (overlapPercentage > 0.8f)) {
 			gradeSprite.SetSprite ("Perfect");

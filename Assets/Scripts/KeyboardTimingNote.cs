@@ -6,15 +6,22 @@ public class KeyboardTimingNote : MonoBehaviour {
 
 	GameObject link;
 	GameObject note;
-	GameObject scoreManager;
 	GradeSprite gradeSprite;
 	public KeyCode key;
-	bool active = false;
+	ScoreManager scoreManager;
+	bool active;
 	float distanceBetweenColliders;
 
+	void Awake () {
+		active = false;
+		distanceBetweenColliders = 0.0f;
+	}
+
 	void Start () {
-		scoreManager = GameObject.Find ("ScoreManager");
-		gradeSprite = GameObject.Find ("Grade Image").GetComponent<GradeSprite> ();
+		link = null;
+		note = null;
+		gradeSprite = GameObject.Find ("Grade Sprite").GetComponent<GradeSprite> ();
+		scoreManager = GameObject.Find ("Score Manager").GetComponent<ScoreManager> ();
 	}
 
 	void Update () {
@@ -25,13 +32,13 @@ public class KeyboardTimingNote : MonoBehaviour {
 				}
 
 				distanceBetweenColliders = Mathf.Abs(GetComponent<CircleCollider2D> ().transform.position.y - note.GetComponent<CircleCollider2D> ().transform.position.y);
-				print ("Distance between colliders: " + distanceBetweenColliders);
-				scoreManager.GetComponent<ScoreManager> ().AddScore (distanceBetweenColliders);
+				//print ("Distance between colliders: " + distanceBetweenColliders);
+				scoreManager.AddScore (distanceBetweenColliders);
 				Destroy (note);
 				active = false;
 			} else {
 				gradeSprite.SetSprite ("Miss");
-				scoreManager.GetComponent<ScoreManager> ().EndStreak ();
+				scoreManager.EndStreak ();
 			}
 		}
 	}

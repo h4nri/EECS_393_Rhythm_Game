@@ -7,8 +7,8 @@ public class Link : MonoBehaviour {
 	public GameObject firstNote;
 	public GameObject secondNote;
 	Rigidbody2D rigidBody;
-	public int visibleDistance;
 	public float speed;
+	public int visibleDistance;
 	 
 	void Awake() {
 		rigidBody = GetComponent<Rigidbody2D>();
@@ -16,7 +16,7 @@ public class Link : MonoBehaviour {
 
 	void Start () {
 		GetComponent<Renderer> ().enabled = false;
-		rigidBody.velocity = new Vector2 (0, -speed);
+		rigidBody.velocity = new Vector2 (0.0f, -speed);
 	}
 
 	void Update () {
