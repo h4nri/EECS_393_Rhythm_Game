@@ -35,7 +35,7 @@ public class MouseTimingNote : MonoBehaviour {
 
 			if (angle <= -45.0f && angle >= -135.0f) {
 				//print ("Direction: Up");
-				if (note.GetComponent<Note> ().direction == "up") {
+				if (note.GetComponent<Note> ().direction == "Up") {
 					ResolveHit ();
 				}
 			} else if (angle <= 135.0f && angle >= 45.0f) {
