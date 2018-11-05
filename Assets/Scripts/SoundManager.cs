@@ -9,24 +9,28 @@ public class SoundManager : MonoBehaviour {
 	AudioClip audioClip;
 	float clipLength;
 
-	void Start () {
-		audioSource = GetComponent<AudioSource> ();
+	void Start()
+    {
+		audioSource = GetComponent<AudioSource>();
 		audioClip = audioSource.clip;
 		clipLength = audioClip.length;
 
 		//print ("Clip Length: " + clipLength);
 	}
 
-	void Update () {
+	void Update()
+    {
 		// print ("Time: " + Time.timeSinceLevelLoad);
 
-		if (Time.timeSinceLevelLoad - clipLength > 0.0f) {
-			StartCoroutine ("EndLevel");
+		if (Time.timeSinceLevelLoad - clipLength > 0.0f)
+        {
+			StartCoroutine("EndLevel");
 		}
 	}
 
-	IEnumerator EndLevel () {
-		yield return new WaitForSeconds (1.5f);
+	IEnumerator EndLevel()
+    {
+		yield return new WaitForSeconds(1.5f);
 		SceneManager.LoadScene("Game Over");
 	}
 }

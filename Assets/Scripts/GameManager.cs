@@ -7,18 +7,21 @@ public class GameManager : MonoBehaviour {
 	GradeSprite gradeSprite;
 	ScoreManager scoreManager;
 
-	void Start () {
-		gradeSprite = GameObject.Find ("Grade Sprite").GetComponent<GradeSprite> ();
-		scoreManager = GameObject.Find ("Score Manager").GetComponent<ScoreManager> ();
+	void Start()
+    {
+		gradeSprite = GameObject.Find("Grade Sprite").GetComponent<GradeSprite>();
+		scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 	}
 
-	void Update () {
+	void Update()
+    {
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D coll) {
-		Destroy (coll.gameObject);
-		gradeSprite.SetSprite ("Miss");
-		scoreManager.EndStreak ();
+	void OnTriggerEnter2D(Collider2D coll)
+    {
+		Destroy(coll.gameObject);
+		gradeSprite.SetSprite("Miss");
+		scoreManager.EndStreak();
 	}
 }

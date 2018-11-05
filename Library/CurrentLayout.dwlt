@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 106
+  controlID: 10
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 107
+  controlID: 11
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 108
+  controlID: 12
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -204,8 +204,8 @@ MonoBehaviour:
     y: 0
     width: 288
     height: 609
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -256,8 +256,8 @@ MonoBehaviour:
     y: 0
     width: 392
     height: 947
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -329,7 +329,7 @@ MonoBehaviour:
       name: Rhythm Master
       fullName: Rhythm Master
       resultStatus: 1
-      duration: 0.0643364
+      duration: 0.0744544
       messages: 
       output: 
       stacktrace: 
@@ -343,7 +343,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/Henry/Documents/Rhythm Master/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.0295347
+      duration: 0.0371702
       messages: 
       output: 
       stacktrace: 
@@ -357,7 +357,7 @@ MonoBehaviour:
       name: GameSpriteTest
       fullName: GameSpriteTest
       resultStatus: 1
-      duration: 0.0233475
+      duration: 0.0231903
       messages: 
       output: 
       stacktrace: 
@@ -371,7 +371,7 @@ MonoBehaviour:
       name: SetSpriteCorrectlySetsSprites
       fullName: GameSpriteTest.SetSpriteCorrectlySetsSprites
       resultStatus: 1
-      duration: 0.0105207
+      duration: 0.0122102
       messages: 
       output: 
       stacktrace: 
@@ -382,13 +382,20 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentID: '[Tests][GameSpriteTest][suite]'
-    m_ResultText: SetSpriteCorrectlySetsSprites (0.011s)
-    m_ResultStacktrace: 
+    m_ResultText: "NoteRenderEnabled (0.039s)\n---\nExpected: False\r\n  But was:
+      \ True\n---\nat NoteTest+<NoteRenderEnabled>c__Iterator0.MoveNext () [0x000a4]
+      in C:\\Users\\Henry\\Documents\\Rhythm Master\\Assets\\Tests\\NoteTest.cs:17\r\nat
+      UnityEngine.TestTools.TestEnumerator+<Execute>c__Iterator0.MoveNext () [0x00031]
+      in C:\\buildslave\\unity\\build\\Extensions\\TestRunner\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:29"
+    m_ResultStacktrace: "at NoteTest+<NoteRenderEnabled>c__Iterator0.MoveNext () [0x000a4]
+      in C:\\Users\\Henry\\Documents\\Rhythm Master\\Assets\\Tests\\NoteTest.cs:17\r\nat
+      UnityEngine.TestTools.TestEnumerator+<Execute>c__Iterator0.MoveNext () [0x00031]
+      in C:\\buildslave\\unity\\build\\Extensions\\TestRunner\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:29\r\n"
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b15a4695
-      m_LastClickedID: -1790551375
-      m_ExpandedIDs: d038d0d63405354003e19c5fffffff7f
+      m_SelectedIDs: ea1c1ca8
+      m_LastClickedID: -1474552598
+      m_ExpandedIDs: eb7d5bbf342561d1d038d0d63405354003e19c5fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -544,14 +551,14 @@ MonoBehaviour:
     height: 588
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 367.82531590107055
+  lastFramingTime: 6377.763847249095
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 507.5, y: 465.27084, z: 0}
+    m_Target: {x: -0.021999836, y: 15.000002, z: 0}
     speed: 2
-    m_Value: {x: 507.5, y: 465.27084, z: 0}
+    m_Value: {x: -0.021999836, y: 15.000002, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -583,9 +590,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1061.157
+    m_Target: 62.062023
     speed: 2
-    m_Value: 1061.157
+    m_Value: 62.062023
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -666,9 +673,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba2f0000
+    m_SelectedIDs: 1a080000
     m_LastClickedID: 0
-    m_ExpandedIDs: dee7feff1404ffffc60affffb61bffff921fffff9424ffff1e29ffff8e48ffffdea6fffff0a7ffff62a9ffffb2aafffffeabffff46adffff58aeffff6aafffffb6b0ffff6eb3ffff22c5ffff94cbffff52cfffffb2deffffe0f8ffff00000000b0300000883300009a330000a4330000ac330000b6330000d0330000de33000016380000bc4c0000
+    m_ExpandedIDs: 20eefcff66f6fcffbcfefcffd249feff404afeff4e4ffeff7853feff4c5dfeffba5dfeffe067feff6a9bfeffae9cfeff901fffff9020ffffae2affff262bffffa230ffffea37fffff43bfffff444ffff2e4affff7a50fffff660fffffc65ffff366bffffc870ffffe69fffffa4a5ffff1ea6ffff56abffff40beffff7ec2ffff98c5ffffa8c9ffffb8cbffff08ceffff3ed3ffffe4fbffff00000000f430000014550000a857000056610000ba610000706600006e6b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -686,8 +693,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
-  m_ExpandedScenes:
-  - Settings
+  m_ExpandedScenes: []
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -729,20 +735,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Henry\Documents\Rhythm Master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: 5a2c0000
-    m_LastClickedID: 11354
-    m_ExpandedIDs: 000000005a2c0000a82c0000b82c0000d62c0000622d0000802d0000542e00002a2f00008a3000002642000000ca9a3b
+    m_SelectedIDs: 0a0b0000
+    m_LastClickedID: 2826
+    m_ExpandedIDs: 0000000074090000c8090000da090000fa0900008a0a0000a80a0000b40a0000840b00005e0c0000682e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -770,7 +776,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a2c0000a82c0000b82c0000d62c0000622d0000802d0000542e00002a2f00008a300000
+    m_ExpandedIDs: 0000000074090000c8090000da090000fa0900008a0a0000a80a0000b40a0000840b00005e0c0000682e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -801,15 +807,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 2a280000d8090000ca090000a40b000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TextMesh Pro
-      m_OriginalName: TextMesh Pro
+      m_Name: GameManager
+      m_OriginalName: GameManager
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11448
+      m_UserData: 2074
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0

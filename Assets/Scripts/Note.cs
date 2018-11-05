@@ -6,22 +6,26 @@ public class Note : MonoBehaviour {
 
 	public GameObject link;
 	Rigidbody2D rigidBody;
-	public float speed;
-	public int visibleDistance;
-	public string direction;
+    public float speed;
+    public int visibleDistance;
+    public string direction;
 
-	void Awake() {
+    void Awake()
+    {
 		rigidBody = GetComponent<Rigidbody2D>();
 	}
 
-	void Start () {
-		GetComponent<Renderer>().enabled = false;
-		rigidBody.velocity = new Vector2 (0.0f, -speed);
+	void Start()
+    {
+		GetComponent<SpriteRenderer>().enabled = false;
+		rigidBody.velocity = new Vector2(0.0f, -speed);
 	}
 
-	void Update () {
-		if (transform.position.y <= visibleDistance) {
-			GetComponent<Renderer> ().enabled = true;
+	void Update()
+    {
+		if (transform.position.y <= visibleDistance)
+        {
+			GetComponent<SpriteRenderer>().enabled = true;
 		}
 	}
 }

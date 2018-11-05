@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelText : MonoBehaviour {
 
-	void Start () {
-		GetComponent<Text> ().text = SceneManager.GetActiveScene ().name;
+	void Start()
+    {
+		GetComponent<Text>().text = SceneManager.GetActiveScene().name;
 	}
 
-	void Update () {
+	void Update()
+    {
 		
 	}
 }
