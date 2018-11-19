@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Over.unity
     guid: eb1a62462e48a2c49a7b1a85746e5d5c
   - enabled: 1
-    path: Assets/Scenes/Twinkle Twinkle Little Star (Base).unity
+    path: Assets/Scenes/Levels/Twinkle Twinkle Little Star.unity
     guid: 23ca8c88f6bd714499a9e55a539ba8c7
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 34838640bbc4ca54aaf6853b31f2fcc6
+  - enabled: 1
+    path: Assets/Scenes/LeaderBoards.unity
+    guid: 569c9e5e56ace9145bdd894bbfe0981f
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 13a57be3b58e2b74582b3be31d2f8761
   m_configObjects: {}

@@ -15,7 +15,27 @@ public class SceneChanger : MonoBehaviour{
 		SceneManager.LoadScene("Settings");
 	}
 
-	public void QuitGame()
+    public void ToInstructions()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ToLeaderBoards()
+    {
+        SceneManager.LoadScene("LeaderBoards");
+    }
+
+    public void ToTitle()
+    {
+        SceneManager.LoadScene("Title");
+    }
+
+    public void QuitGame()
     {
 		Application.Quit();
 	}
