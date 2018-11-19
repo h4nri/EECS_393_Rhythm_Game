@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class KeyboardTimingNote : MonoBehaviour {
 
-	GameObject link;
-	GameObject note;
-	GradeSprite gradeSprite;
-	public KeyCode key;
-	ScoreManager scoreManager;
-	bool active;
-	float distanceBetweenColliders;
+	private GameObject link;
+	private GameObject note;
+	private GradeSprite gradeSprite;
+	private ScoreManager scoreManager;
+	private bool active; // Var to determine if a note is in a KeyboardTimingNote's collider
+    public KeyCode key;
 
-	void Awake()
+    private void Awake()
     {
 		active = false;
-		distanceBetweenColliders = 0.0f;
 	}
 
-	void Start()
+	private void Start()
     {
 		link = null;
 		note = null;
@@ -26,7 +24,7 @@ public class KeyboardTimingNote : MonoBehaviour {
 		scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 	}
 
-	void Update()
+	private void Update()
     {
 		if (Input.GetKeyDown(key))
         {
@@ -37,12 +35,11 @@ public class KeyboardTimingNote : MonoBehaviour {
 					Destroy(link);
 				}
 
-				distanceBetweenColliders = Mathf.Abs(GetComponent<CircleCollider2D>().transform.position.y - note.GetComponent<CircleCollider2D>().transform.position.y);
-				//print ("Distance between colliders: " + distanceBetweenColliders);
-				scoreManager.AddScore(distanceBetweenColliders);
+				float distanceBetweenColliders = Mathf.Abs(GetComponent<CircleCollider2D>().transform.position.y - note.GetComponent<CircleCollider2D>().transform.position.y);
+				scoreManager.AddScore(distanceBetweenColliders); // Amount of score added is based on distance between colliders of a KeyboardTimingNote and a note
 				Destroy(note);
 				active = false;
-			} else
+			} else // Hitting a key associated with a KeyboardTimingNote when it's not active counts as a miss
             {
 				gradeSprite.SetSprite("Miss");
 				scoreManager.EndStreak();
@@ -50,7 +47,7 @@ public class KeyboardTimingNote : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D coll)
+	private void OnTriggerEnter2D(Collider2D coll)
     {
 		if (coll.gameObject.tag == "Note")
         {
@@ -60,7 +57,7 @@ public class KeyboardTimingNote : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit2D(Collider2D coll)
+	private void OnTriggerExit2D(Collider2D coll)
     {
 		active = false;
 	}

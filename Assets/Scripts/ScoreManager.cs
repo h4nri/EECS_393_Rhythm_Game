@@ -5,36 +5,38 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    GradeSprite gradeSprite;
-    float areaOfOverlap;
-    float overlapPercentage;
+    private GradeSprite gradeSprite;
     public int Multiplier { get; set; }
     public int Score { get; set; }
     public int Streak { get; set; }
 
-    void Awake()
+    private void Awake()
     {
-        areaOfOverlap = 0.0f;
-        overlapPercentage = 0.0f;
         Multiplier = 1;
         Score = 0;
         Streak = 0;
     }
 
-    void Start()
+    private void Start()
     {
         gradeSprite = GameObject.Find("Grade Sprite").GetComponent<GradeSprite>();
     }
 
-    void Update()
+    private void Update()
     {
         GetComponent<Text>().text = Score + "\n" + Streak + "\n" + Multiplier + "x";
     }
 
+    /** 
+     * Adds to current score
+     * Amount of score added is based on percentage of overlap between colliders of notes and timing notes
+     * 
+     * @param distance The distance between centers of colliders
+     */
     public void AddScore(float distance)
     {
-        areaOfOverlap = (2.0f * Mathf.Pow(0.5f, 2.0f) * Mathf.Acos(distance / (2.0f * 0.5f))) - ((distance / 2.0f) * (Mathf.Sqrt(4.0f * Mathf.Pow(0.5f, 2.0f)) - Mathf.Pow(distance, 2.0f)));
-        overlapPercentage = areaOfOverlap / (Mathf.PI * Mathf.Pow(0.5f, 2.0f));
+        float areaOfOverlap = (2.0f * Mathf.Pow(0.5f, 2.0f) * Mathf.Acos(distance / (2.0f * 0.5f))) - ((distance / 2.0f) * (Mathf.Sqrt(4.0f * Mathf.Pow(0.5f, 2.0f)) - Mathf.Pow(distance, 2.0f)));
+        float overlapPercentage = areaOfOverlap / (Mathf.PI * Mathf.Pow(0.5f, 2.0f));
 
         //print ("Overlap Percentage: " + overlapPercentage);
 

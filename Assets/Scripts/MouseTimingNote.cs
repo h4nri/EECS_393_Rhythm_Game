@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class MouseTimingNote : MonoBehaviour {
 
-	GameObject link;
-	GameObject note;
-	ScoreManager scoreManager;
-	Vector2 initialMousePos;
-	bool active;
-	bool trackingDirectionalNote;
-	float distanceBetweenColliders;
+	private GameObject link;
+	private GameObject note;
+	private ScoreManager scoreManager;
+	private Vector2 initialMousePos;
+	private bool active; // Var to determine if a note is in a MouseTimingNote's collider
+    private bool trackingDirectionalNote; // Var to determine if current note is a directional note
 
-	void Awake ()
+	private void Awake ()
     {
 		active = false;
 		trackingDirectionalNote = false;
-		distanceBetweenColliders = 0.0f;
 	}
 
-	void Start ()
+	private void Start ()
     {
 		link = null;
 		note = null;
@@ -27,40 +25,39 @@ public class MouseTimingNote : MonoBehaviour {
 		initialMousePos = new Vector2(0.0f, 0.0f);
 	}
 
-	void Update ()
+	private void Update ()
     {
 		if (Input.GetMouseButtonUp(0) && trackingDirectionalNote)
         {
-			//print ("Mouse Up Position: " + Input.mousePosition);
 			Vector2 mouseDirection = new Vector2(Input.mousePosition.x - initialMousePos.x, Input.mousePosition.y - initialMousePos.y);
-			// print ("Modified Mouse Pos: " + modifiedMousePos);
 			float angle = Vector2.SignedAngle(mouseDirection, Vector2.right);
-			//print ("Angle: " + angle);
 
+            // Determines the direction that a player slid their mouse based on angle, and
+            // directional notes are hit if the chosen direction was correct
 			if (angle <= -45.0f && angle >= -135.0f)
             {
-				//print ("Direction: Up");
+				//print("Direction: Up");
 				if (note.GetComponent<Note>().direction == "Up")
                 {
 					ResolveHit();
 				}
 			} else if (angle <= 135.0f && angle >= 45.0f)
             {
-				//print ("Direction: Down");
+				//print("Direction: Down");
 				if (note.GetComponent<Note>().direction == "Down")
                 {
 					ResolveHit();
 				}
 			} else if (angle < -135.0f || angle > 135.0f)
             {
-				//print ("Direction: Left");
+				//print("Direction: Left");
 				if (note.GetComponent<Note>().direction == "Left")
                 {
 					ResolveHit();
 				}
 			} else if (angle > -45.0f && angle < 45.0f)
             {
-				//print ("Direction: Right");
+				//print("Direction: Right");
 				if (note.GetComponent<Note>().direction == "Right")
                 {
 					ResolveHit();
@@ -69,13 +66,12 @@ public class MouseTimingNote : MonoBehaviour {
 		}
 	}
 
-	void OnMouseDown()
+	private void OnMouseDown()
     {
-		//print ("Mouse Down Pos: " + Input.mousePosition);
-
 		if (active)
         {
-			if (note.GetComponent<Note>().direction.Length == 0)
+            // Checks whether or not the note in a MouseTimingNote's collider is a directional note
+            if (note.GetComponent<Note>().direction.Length == 0)
             {
 				ResolveHit();
 			} else {
@@ -85,7 +81,7 @@ public class MouseTimingNote : MonoBehaviour {
 		}
 	}
 		
-	void OnTriggerEnter2D(Collider2D coll)
+	private void OnTriggerEnter2D(Collider2D coll)
     {
 		if (coll.gameObject.tag == "Note")
         {
@@ -95,23 +91,22 @@ public class MouseTimingNote : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit2D(Collider2D coll)
+	private void OnTriggerExit2D(Collider2D coll)
     {
 		active = false;
 		trackingDirectionalNote = false;
 	}
 
-	void ResolveHit ()
+	private void ResolveHit ()
     {
 		if (link != null)
         {
 			Destroy(link);
 		}
 
-		distanceBetweenColliders = Mathf.Abs(GetComponent<CircleCollider2D>().transform.position.y - note.GetComponent<CircleCollider2D>().transform.position.y);
-		//print ("Distance between colliders: " + distanceBetweenColliders);
-		scoreManager.AddScore(distanceBetweenColliders);
-		Destroy(note);
+		float distanceBetweenColliders = Mathf.Abs(GetComponent<CircleCollider2D>().transform.position.y - note.GetComponent<CircleCollider2D>().transform.position.y);
+		scoreManager.AddScore(distanceBetweenColliders); // Amount of score added is based on distance between colliders of a KeyboardTimingNote and a note
+        Destroy(note);
 		active = false;
 	}
 }

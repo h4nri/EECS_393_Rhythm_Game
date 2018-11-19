@@ -4,28 +4,23 @@ using UnityEngine;
 
 public class Link : MonoBehaviour {
 
-	public GameObject firstNote;
-	public GameObject secondNote;
-	Rigidbody2D rigidBody;
-	public float speed;
-	public int visibleDistance;
-	 
-	void Awake()
-    {
-		rigidBody = GetComponent<Rigidbody2D>();
-	}
+	[SerializeField] private GameObject firstNote;
+    [SerializeField] private GameObject secondNote;
+    [SerializeField] private float speed;
+    [SerializeField] private int visibleDistance;
 
-	void Start()
+	private void Start()
     {
 		GetComponent<SpriteRenderer>().enabled = false;
-		rigidBody.velocity = new Vector2(0.0f, -speed);
 	}
 
-	void Update()
+    private void Update()
     {
-		if (transform.position.y <= visibleDistance)
+	    transform.position = new Vector3(transform.position.x, transform.position.y - (speed * Time.deltaTime), transform.position.z);
+
+        if (transform.position.y <= visibleDistance)
         {
-			GetComponent<SpriteRenderer>().enabled = true;
-		}
+            GetComponent<SpriteRenderer>().enabled = true;
+        }
 	}
 }

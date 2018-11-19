@@ -5,16 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour{
 
-	void Start()
-    {
-		
-	}
-
-	void Update()
-    {
-		
-	}
-
 	public void ToLevelSelect()
     {
 		SceneManager.LoadScene("Level Select");

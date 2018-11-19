@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	GradeSprite gradeSprite;
-	ScoreManager scoreManager;
+	private GradeSprite gradeSprite;
+	private ScoreManager scoreManager;
 
-	void Start()
+	private void Start()
     {
 		gradeSprite = GameObject.Find("Grade Sprite").GetComponent<GradeSprite>();
 		scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 	}
 
-	void Update()
-    {
-		
-	}
-
-	void OnTriggerEnter2D(Collider2D coll)
+    // Destroys GameObjects that enter this GameObject's collider and ends the current streak
+    private void OnTriggerEnter2D(Collider2D coll)
     {
 		Destroy(coll.gameObject);
 		gradeSprite.SetSprite("Miss");

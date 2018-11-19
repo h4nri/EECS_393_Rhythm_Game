@@ -5,22 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour {
 
-	AudioSource audioSource;
-	AudioClip audioClip;
-	float clipLength;
+	private AudioSource audioSource;
+	private AudioClip audioClip;
+	private float clipLength;
 
-	void Start()
+	private void Start()
     {
 		audioSource = GetComponent<AudioSource>();
 		audioClip = audioSource.clip;
 		clipLength = audioClip.length;
 
-		//print ("Clip Length: " + clipLength);
+		//print("Clip Length: " + clipLength);
 	}
 
-	void Update()
+	private void Update()
     {
-		// print ("Time: " + Time.timeSinceLevelLoad);
+		// print("Time: " + Time.timeSinceLevelLoad);
 
 		if (Time.timeSinceLevelLoad - clipLength > 0.0f)
         {
