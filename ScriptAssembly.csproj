@@ -318,6 +318,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Cloud.UserReporting.Plugin">
+      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Cloud.UserReporting.Client">
+      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Client.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
     </Reference>

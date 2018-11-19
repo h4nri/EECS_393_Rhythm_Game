@@ -614,11 +614,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 5b6356e5-9063-4896-9c0d-0bee68d8418a
-  projectName: Rhythm Game
+  projectName: Rhythm Master
   organizationId: h4nriz
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
