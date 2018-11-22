@@ -70,7 +70,7 @@
     <Compile Include="Assets\Scripts\Note.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
+    <Compile Include="Assets\Scripts\SettingsManager.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <None Include="Assets\Scripts\ScriptAssembly.asmdef" />
     <Reference Include="UnityEngine.AIModule">

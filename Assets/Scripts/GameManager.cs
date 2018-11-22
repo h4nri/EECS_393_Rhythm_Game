@@ -20,4 +20,5 @@ public class GameManager : MonoBehaviour {
 		gradeSprite.SetSprite("Miss");
 		scoreManager.EndStreak();
 	}
+
 }

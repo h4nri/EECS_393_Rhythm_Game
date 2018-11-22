@@ -26,7 +26,19 @@ public class SoundManager : MonoBehaviour {
         {
 			StartCoroutine("EndLevel");
 		}
-	}
+
+        //Check if the game is paused. If so, pause audio 
+        if (SettingsManager.isPaused)
+        {
+            audioSource.Pause();
+        }
+
+        //Check if the game is unpaused. If so, unpause audio 
+        else if (!(SettingsManager.isPaused))
+        {
+            audioSource.UnPause();
+        }
+    }
 
 	IEnumerator EndLevel()
     {

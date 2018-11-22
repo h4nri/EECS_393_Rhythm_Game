@@ -179,7 +179,7 @@ c196c9152d87eafc62df71fad1b00f46 Assembly-CSharp.dll:.UserReportingMonitor
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 1ebe4a858369dc616533d2d7518479d0 ScriptAssembly.dll:.Link
 a1ffb26bddfc3df4b9f0b0b6c5b9392e ScriptAssembly.dll:.KeyboardTimingNote
-486cd95c82d8305219c352c06b776e1f ScriptAssembly.dll:.ShowSliderValue
+d345dc630141ba3a360c50d6cb7e7c9d ScriptAssembly.dll:.SettingsManager
 fc7068d77c74677c6cc99fd7ce04e2c8 Assembly-CSharp.dll:.FramerateMonitor
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 e3ca7a875556b6a714305e1a706aeb81 Assembly-CSharp.dll:.UserReportingScript
