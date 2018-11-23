@@ -8,7 +8,6 @@ public class SceneChanger : MonoBehaviour{
 	public void ToLevelSelect()
     {
 		SceneManager.LoadScene("Level Select");
-        Time.timeScale = 0;
     }
 
     public void SaveScene()
