@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 83
+  controlID: 71
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 84
+  controlID: 72
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 85
+  controlID: 73
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -374,9 +374,9 @@ MonoBehaviour:
       isSuite: 1
       categories: []
       parentID: 
-    - id: '[C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: '[D:/College/SenrioYearTemp/EECS-393/EECS_393_Rhythm_Master/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
-      fullName: C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Library/ScriptAssemblies/Tests.dll
+      fullName: D:/College/SenrioYearTemp/EECS-393/EECS_393_Rhythm_Master/Library/ScriptAssemblies/Tests.dll
       resultStatus: 0
       duration: 0
       messages: 
@@ -586,14 +586,14 @@ MonoBehaviour:
     height: 588
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2547.719385738125
+  lastFramingTime: 2678.930921534863
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 768.39685, y: 304.4542, z: 14.782912}
+    m_Target: {x: 453.48538, y: 359.533, z: -1.25}
     speed: 2
-    m_Value: {x: 768.39685, y: 304.4542, z: 14.782912}
+    m_Value: {x: 453.48538, y: 359.533, z: -1.25}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -625,9 +625,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1055.6243
+    m_Target: 998.19556
     speed: 2
-    m_Value: 1055.6243
+    m_Value: 998.19556
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -708,9 +708,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a09d0000
-    m_LastClickedID: 40352
-    m_ExpandedIDs: 480af6ff9215f6ff8829f6ffbc2bf6ff2e2ef6ffc43df6ff784af6ff464ef6ffb867f6ff186ff6ff3270f6ffaa76f6ff167cf6ff0883f6ff4c8df6ffb2a0f6ffbea9f6ffa20ef7ffae10f7ffc211f7ffdc12f7ffa214f7ff2c45f7ff7451f7ff1270f7ffe080f7ffe644f8ff8c55f8ff5a5ff8ff7cadf8ff8a21faff6a2dfaff3c8efbff0093fbff1a94fbff7461fcff5a63fcffb864fcff6874fcff8275fcffba82fcff6485fcff7488fcfffa8bfcff8c8ffcffd808ffffc82affffe4fbffff00000000ac0d0000c60d0000f20d00006e0e0000dc0e0000fa0e0000ba34000004350000ba350000fc35000048360000a83600009a370000c6370000d03700005c39000076390000a23900001e3a00008c3a0000aa3a0000b2490000cc490000f8490000744a0000e24a0000004b0000126100001c6100003061000042610000646100006e610000726100007e61000088610000986100002e6c0000e46f0000d67000001e710000427700009c780000a87800002a7a00004a7b00005c7b0000787b0000827b00008a7b0000947b0000ae7b0000bc7b0000ce7b00007c7f0000967f0000a07f0000da7f0000ec7f0000408100005e8a0000669000005891000094920000d893000048950000509800004c9900003e9b0000f29c0000b09d0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 4c95fdffa0e3fdffc4e5fdff5ae7fdff72e8fdff58ebfdff14edfdffe2f1fdfffcf2fdff1cf4fdff2ef5fdff42f6fdff4855feff5e60feffc66ffeff1872feff3484feff4e93feff30acfeff78b9feff28c6feff3ec7fefffeccfeff98cefeffb6cffeff54d1fefface9feff16f7feffb0fafeff46fcfeff98fdfeff9205ffff040bffff121bffff7c22ffffde23ffff4825ffffd272ffff1274ffff127affff327bffffc081ffffce86ffff148dffff288effffc28fffff8aa3ffff62b8ffffbebaffff12bcffff52c6ffff4ad7ffff54e8ffff24f9ffff000000005a300000f6380000c23900001c3b00002e3b0000543b00005c3b0000643b00007e3b00008c3b00005a3c00006c3d0000023e0000443e0000f23e0000323f00006e410000224800002e480000924a00008c4b0000d64b0000624c00008e4c00004a4e00003c5d0000625d00006a5d0000725d00008c5d00009a5d00006a650000cc6e0000a06f0000cc6f00002884000034840000be840000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -777,28 +777,28 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Henry\Documents\EECS_393_Rhythm_Master
+  m_LastProjectPath: D:\College\SenrioYearTemp\EECS-393\EECS_393_Rhythm_Master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 68}
-    m_SelectedIDs: 840c0000
-    m_LastClickedID: 3204
-    m_ExpandedIDs: 0000000098090000ea090000fc0900001c0a0000ae0a0000cc0a0000d80a0000a60b0000dc0b0000840c00005e32000000ca9a3b
+    scrollPos: {x: 0, y: 20}
+    m_SelectedIDs: 502f0000
+    m_LastClickedID: 12112
+    m_ExpandedIDs: 00000000642c0000b62c0000c82c0000e82c00007a2d0000982d0000a42d0000722e0000a82e0000502f0000e430000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Scenes
+      m_OriginalName: Scenes
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 12112
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -812,7 +812,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098090000ea090000fc0900001c0a0000ae0a0000cc0a0000d80a0000a60b0000dc0b0000840c00005e320000
+    m_ExpandedIDs: 00000000642c0000b62c0000c82c0000e82c00007a2d0000982d0000a42d0000722e0000a82e0000502f0000e4300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -840,21 +840,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 2a280000d8090000ca090000a40b0000c806000000000000
+    m_ExpandedInstanceIDs: 2a280000d8090000ca090000a40b0000c806000000000000ec300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Instructions
+      m_OriginalName: Instructions
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11562
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
