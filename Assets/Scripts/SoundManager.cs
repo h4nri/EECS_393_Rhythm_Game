@@ -7,18 +7,18 @@ public class SoundManager : MonoBehaviour {
 
 	private AudioSource audioSource;
 	private AudioClip audioClip;
-    private ScoreManager scoreManager;
 	private float clipLength;
 
 	private void Start()
     {
-		audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
 		audioClip = audioSource.clip;
-        scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 		clipLength = audioClip.length;
+        //adding dont destroy for testing
+        //DontDestroyOnLoad(transform.gameObject);
 
-		//print("Clip Length: " + clipLength);
-	}
+        //print("Clip Length: " + clipLength);
+    }
 
 	private void Update()
     {
@@ -45,7 +45,6 @@ public class SoundManager : MonoBehaviour {
 	IEnumerator EndLevel()
     {
 		yield return new WaitForSeconds(1.5f);
-        scoreManager.UpdateLeaderboards();
 		SceneManager.LoadScene("Game Over");
 	}
 }

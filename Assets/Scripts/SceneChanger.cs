@@ -8,39 +8,68 @@ public class SceneChanger : MonoBehaviour{
 	public void ToLevelSelect()
     {
 		SceneManager.LoadScene("Level Select");
+        //Time.timeScale = 0;
     }
 
     public void SaveScene()
     {
+
+        //case in which the game is paused
+        if (SettingsManager.isPaused)
+        {
+            //GameObject pauseMenu = GameObject.Find("PauseMenu");
+            //GameObject.Find("PauseMenu").SetActive(false);
+            //Time.timeScale = 0f;
+            // SettingsManager.isPaused = true;
+        }
+
+        //adding dont destroy for testing
+        //DontDestroyOnLoad(transform.gameObject);
+
         PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
     }
 
     //Return to the last saved scene
     public void BackToLast()
     {
+        //adding dont destroy for testing
+        //DontDestroyOnLoad(transform.gameObject);
         string sceneName = PlayerPrefs.GetString("lastLoadedScene");
 
         SceneManager.LoadScene(sceneName);
 
-        //TODO: Fix bug that makes it so that when returning from settings or instructions the pause menu is not active.
-        //Check if game is paused to set the correct active panel (pause menu)
-        //if (SettingsManager.isPaused) 
-        //{
-         //   GameObject pauseMenu;
-        //    pauseMenu.SetActive(true);
-       // }
+        //case in which the game is paused
+        if (SettingsManager.isPaused)
+        {
+           // GameObject pauseMenu = GameObject.Find("PauseMenu");
+          //  pauseMenu.SetActive(true);
+            //Time.timeScale = 0f;
+           // SettingsManager.isPaused = true;
+        }
  
     }
 
-	public void ToSettings()
+
+    public void PauseToSettings()
+    {
+        SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+    }
+
+    //Instructions scene does not need to save its state, so it can just be addtive
+    public void ToInstructions()
+    {
+        SceneManager.LoadScene("Instructions", LoadSceneMode.Additive);
+    }
+
+    public void UnloadInstructions()
+    {
+        SceneManager.UnloadScene("Instructions");
+    }
+
+    public void ToSettings()
     {
 		SceneManager.LoadScene("Settings");
 	}
-
-    public void ToInstructions()
-    {
-        SceneManager.LoadScene("Instructions");
-    }
 
     public void ToMainMenu()
     {

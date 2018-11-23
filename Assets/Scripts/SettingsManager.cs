@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour {
 
-    //want other scripts to access  pause variable
+    //pause settings
     public static bool isPaused = false;
 
     public GameObject pauseMenu;
+    
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class SettingsManager : MonoBehaviour {
         }
 	}
 
+    //in-game pause settings
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
@@ -40,11 +42,19 @@ public class SettingsManager : MonoBehaviour {
     }
     
 
-    void PauseGame()
+    public void PauseGame()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+    }
+
+    //audio settings 
+    public void SetVolume (float volume)
+    {
+        float newVolume = AudioListener.volume;
+        newVolume = volume;
+        AudioListener.volume = newVolume;
     }
 
 }

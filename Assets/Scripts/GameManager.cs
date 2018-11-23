@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour {
 
 	private void Start()
     {
-		gradeSprite = GameObject.Find("Grade Sprite").GetComponent<GradeSprite>();
+        gradeSprite = GameObject.Find("Grade Sprite").GetComponent<GradeSprite>();
 		scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
-	}
+        //adding dont destroy for testing
+        //DontDestroyOnLoad(transform.gameObject);
+    }
 
     // Destroys GameObjects that enter this GameObject's collider and ends the current streak
     private void OnTriggerEnter2D(Collider2D coll)

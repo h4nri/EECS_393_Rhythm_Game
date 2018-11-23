@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
@@ -77,33 +76,4 @@ public class ScoreManager : MonoBehaviour {
         Streak = 0;
         Multiplier = 1;
     }  
-
-    public void UpdateLeaderboards()
-    {
-        string activeScene = SceneManager.GetActiveScene().name;
-
-        if (Score > PlayerPrefs.GetInt(activeScene + "3"))
-        {
-            if (Score > PlayerPrefs.GetInt(activeScene + "2"))
-            {
-                if (Score > PlayerPrefs.GetInt(activeScene + "1"))
-                {
-                    PlayerPrefs.SetInt(activeScene + "3", PlayerPrefs.GetInt(activeScene + "2"));
-                    PlayerPrefs.SetInt(activeScene + "2", PlayerPrefs.GetInt(activeScene + "1"));
-                    PlayerPrefs.SetInt(activeScene + "1", Score);
-                } else
-                {
-                    PlayerPrefs.SetInt(activeScene + "3", PlayerPrefs.GetInt(activeScene + "2"));
-                    PlayerPrefs.SetInt(activeScene + "2", Score);
-                }
-            } else
-            {
-                PlayerPrefs.SetInt(activeScene + "3", Score);
-            }
-        }
-
-        print(activeScene + " #1: " + PlayerPrefs.GetInt(activeScene + "1"));
-        print(activeScene + " #2: " + PlayerPrefs.GetInt(activeScene + "2"));
-        print(activeScene + " #3: " + PlayerPrefs.GetInt(activeScene + "3"));
-    }
 }
