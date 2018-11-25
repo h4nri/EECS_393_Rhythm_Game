@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212300242045557772}
   - component: {fileID: 50768151305136672}
   - component: {fileID: 114249044674676880}
+  - component: {fileID: 114884911100007154}
   m_Layer: 2
   m_Name: Link
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1796199509233078}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2.25, z: 1}
+  m_LocalScale: {x: 1, y: 2.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,8 +76,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstNote: {fileID: 0}
   secondNote: {fileID: 0}
-  speed: 2
-  visibleDistance: 32
+--- !u!114 &114884911100007154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796199509233078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0852eda1631aab040a466459d7b77327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212300242045557772
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{6087A86C-7163-C0AF-0B1A-54287AB0ED2B}</ProjectGuid>
+    <ProjectGuid>{808EE03B-408F-9354-0F4B-D916D88F1509}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Tests</AssemblyName>
@@ -306,10 +306,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Cloud.UserReporting.Client">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Client.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Client.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Cloud.UserReporting.Plugin">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Plugin.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Plugin.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Henry/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -359,7 +359,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ScriptAssembly.csproj">
-      <Project>{F26BF742-1930-13C6-D979-A79BFBBD01DC}</Project>
+      <Project>{D9E764C4-1E52-6F0A-DD77-D96C6DC41000}</Project>
       <Name>ScriptAssembly</Name>
     </ProjectReference>
   </ItemGroup>

@@ -42,11 +42,11 @@ TagManager:
   - name: Background
     uniqueID: 669794511
     locked: 0
-  - name: Lanes
-    uniqueID: 3828674705
-    locked: 0
   - name: Timing Notes
     uniqueID: 1194616941
+    locked: 0
+  - name: Hold Lines
+    uniqueID: 3897323561
     locked: 0
   - name: Links
     uniqueID: 4238137167

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58512157845921926}
   - component: {fileID: 50766533351492258}
   - component: {fileID: 114893776819942526}
+  - component: {fileID: 114514832898054756}
   m_Layer: 2
   m_Name: Red-Orange Right
   m_TagString: Note
@@ -78,6 +79,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114514832898054756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487122677366930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0852eda1631aab040a466459d7b77327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114893776819942526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,9 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbad5961a4ca1e94d851aa289deb483b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdLine: {fileID: 0}
   link: {fileID: 0}
-  speed: 2
-  visibleDistance: 32
   direction: Right
 --- !u!212 &212054479340341698
 SpriteRenderer:

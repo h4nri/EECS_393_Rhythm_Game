@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58613213216007572}
   - component: {fileID: 50127850635940910}
   - component: {fileID: 114235438764608892}
+  - component: {fileID: 114667886317221444}
   m_Layer: 2
   m_Name: Indigo Note
   m_TagString: Note
@@ -89,10 +90,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbad5961a4ca1e94d851aa289deb483b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdLine: {fileID: 0}
   link: {fileID: 0}
-  speed: 2
-  visibleDistance: 32
   direction: 
+--- !u!114 &114667886317221444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002620223835816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0852eda1631aab040a466459d7b77327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212806046715321348
 SpriteRenderer:
   m_ObjectHideFlags: 1

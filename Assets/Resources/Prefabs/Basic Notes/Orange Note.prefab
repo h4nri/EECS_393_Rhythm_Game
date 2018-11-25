@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58053537264286370}
   - component: {fileID: 50490695650430056}
   - component: {fileID: 114907784243423648}
+  - component: {fileID: 114681591225735734}
   m_Layer: 2
   m_Name: Orange Note
   m_TagString: Note
@@ -78,6 +79,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114681591225735734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330709291835568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0852eda1631aab040a466459d7b77327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114907784243423648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,9 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbad5961a4ca1e94d851aa289deb483b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdLine: {fileID: 0}
   link: {fileID: 0}
-  speed: 2
-  visibleDistance: 32
   direction: 
 --- !u!212 &212811341171894752
 SpriteRenderer:

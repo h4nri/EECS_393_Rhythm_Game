@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -78,6 +76,7 @@ public class ScoreManager : MonoBehaviour {
         Multiplier = 1;
     }  
 
+    // Called when a level is finished to potentially update the leaderboards
     public void UpdateLeaderboards()
     {
         string activeScene = SceneManager.GetActiveScene().name;

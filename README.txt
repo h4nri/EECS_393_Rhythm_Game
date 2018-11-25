@@ -4,7 +4,6 @@ Rhythm Master is a Guitar Hero-style rhythm game currently being developed by He
 
 <TODO List>
 
-Implement sliders
 Improve UI and create menu scenes (ex. settings)
 Create animations for button presses and note hits
 Develop a level editor

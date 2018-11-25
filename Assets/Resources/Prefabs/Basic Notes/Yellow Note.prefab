@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58955203860432994}
   - component: {fileID: 50944428378883272}
   - component: {fileID: 114113117905682880}
+  - component: {fileID: 114449020254594774}
   m_Layer: 2
   m_Name: Yellow Note
   m_TagString: Note
@@ -89,10 +90,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbad5961a4ca1e94d851aa289deb483b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdLine: {fileID: 0}
   link: {fileID: 0}
-  speed: 2
-  visibleDistance: 32
   direction: 
+--- !u!114 &114449020254594774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314127925498972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0852eda1631aab040a466459d7b77327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212723886666893410
 SpriteRenderer:
   m_ObjectHideFlags: 1

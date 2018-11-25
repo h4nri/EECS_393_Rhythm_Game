@@ -1,26 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Link : MonoBehaviour {
 
 	[SerializeField] private GameObject firstNote;
     [SerializeField] private GameObject secondNote;
-    [SerializeField] private float speed;
-    [SerializeField] private int visibleDistance;
 
-	private void Start()
+    private void Start()
     {
-		GetComponent<SpriteRenderer>().enabled = false;
-	}
-
-    private void Update()
-    {
-	    transform.position = new Vector3(transform.position.x, transform.position.y - (speed * Time.deltaTime), transform.position.z);
-
-        if (transform.position.y <= visibleDistance)
-        {
-            GetComponent<SpriteRenderer>().enabled = true;
-        }
-	}
+        transform.localScale = new Vector3(transform.localScale.x, Math.Abs(firstNote.transform.position.x) - Math.Abs(secondNote.transform.position.x), transform.localScale.z);
+        transform.position = new Vector3((firstNote.transform.position.x + secondNote.transform.position.x) / 2, 
+            firstNote.transform.position.y, firstNote.transform.position.z);
+    }
 }

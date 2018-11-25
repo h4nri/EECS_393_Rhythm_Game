@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{12298B01-A3C5-CC22-816F-AC61CB140216}</ProjectGuid>
+    <ProjectGuid>{7D080B76-DCBF-EBFD-4789-D7E27E738932}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -88,16 +88,16 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -298,10 +298,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Cloud.UserReporting.Client">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Client.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Client.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Cloud.UserReporting.Plugin">
-      <HintPath>C:/Users/Henry/Documents/Rhythm Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Plugin.dll</HintPath>
+      <HintPath>C:/Users/Henry/Documents/EECS_393_Rhythm_Master/Assets/UserReporting/Scripts/Unity.Cloud.UserReporting.Plugin.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Henry/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
@@ -339,7 +339,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ScriptAssembly.csproj">
-      <Project>{F26BF742-1930-13C6-D979-A79BFBBD01DC}</Project>
+      <Project>{D9E764C4-1E52-6F0A-DD77-D96C6DC41000}</Project>
       <Name>ScriptAssembly</Name>
     </ProjectReference>
   </ItemGroup>
