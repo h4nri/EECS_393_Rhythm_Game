@@ -64,4 +64,9 @@ public class SceneChanger : MonoBehaviour{
     {
 		SceneManager.LoadScene("Twinkle Twinkle Little Star");
 	}
+
+    public void CreateNewLevel()
+    {
+        SceneManager.LoadScene("Level Base");
+    }
 }
