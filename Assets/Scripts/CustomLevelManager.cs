@@ -13,16 +13,7 @@ public class CustomLevelManager : MonoBehaviour {
 
         Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();
         Dropdown.ClearOptions();
-        if (CustomLevelData.LevelData.CustomLevels != null) 
-        {
-            Dropdown.AddOptions(CustomLevelData.LevelData.CustomLevels);
-        }
-        else
-        {
-            List<string> list = new List<string>();
-            list.Add("No Current Custom Levels");
-            Dropdown.AddOptions(list);
-        }
+        Dropdown.AddOptions(CustomLevelData.LevelData.CustomLevels);
 
 
     }
