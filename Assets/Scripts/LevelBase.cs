@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelBase : MonoBehaviour {
+public class LevelBase : MonoBehaviour
+{
 
     private int BPM = LevelEditor.BPM;
     private string SongName = LevelEditor.SongChoice;
     private int Difficulty = LevelEditor.Difficulty;
     private float DistanceBetweenNotes;
     AudioSource audioSource;
+    public string LevelName { get; set;}
 
     // Use this for initialization
     void Start () {
@@ -30,6 +32,8 @@ public class LevelBase : MonoBehaviour {
 
         //Vector3 x = Input.mousePosition;
         //Vector2 scroll = Input.mouseScrollDelta;
+        LevelName = "Custom Level: " + SongName + " - " + LevelName;
+
     }
 	
 
@@ -52,14 +56,17 @@ public class LevelBase : MonoBehaviour {
         if (diff == 0)
         {
             FallSpeed = 4;
+            LevelName = "Easy";
         }
         else if (diff == 1)
         {
             FallSpeed = 3;
+            LevelName = "Medium";
         }
         else
         {
             FallSpeed = 2;
+            LevelName = "Hard";
         }
 
         return FallSpeed;
