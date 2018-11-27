@@ -57,17 +57,17 @@ public class LevelBase : MonoBehaviour
         int FallSpeed;
         if (diff == 0)
         {
-            FallSpeed = 4;
+            FallSpeed = 5;
             LevelName = "Easy";
         }
         else if (diff == 1)
         {
-            FallSpeed = 3;
+            FallSpeed = 4;
             LevelName = "Medium";
         }
         else
         {
-            FallSpeed = 2;
+            FallSpeed = 3;
             LevelName = "Hard";
         }
 

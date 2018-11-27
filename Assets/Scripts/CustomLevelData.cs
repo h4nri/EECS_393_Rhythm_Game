@@ -56,6 +56,13 @@ public class CustomLevelData : MonoBehaviour
         }
     }
 
+    public void ClearCustomLevels() {
+       
+            print("I exist");
+            File.Delete(Application.persistentDataPath + "/playerData.dat");
+        
+    }
+
 }
 
 

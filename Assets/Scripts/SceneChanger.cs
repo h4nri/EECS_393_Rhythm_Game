@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.IO;
 
 public class SceneChanger : MonoBehaviour{
 
@@ -83,6 +85,7 @@ public class SceneChanger : MonoBehaviour{
 
     public void ToPlayCustomLevel()
     {
+        // TODO change this to actulaly input the custom informaiton
         SceneManager.LoadScene("Custom Level Play");
     }
 
@@ -97,5 +100,14 @@ public class SceneChanger : MonoBehaviour{
         CustomLevelData.LevelData.Save();
         SceneManager.LoadScene("Level Select");
 
+    }
+
+    public void ClearCustomLevels()
+    {
+        if (File.Exists(Application.persistentDataPath + "/playerData.dat"))
+        {
+            print("I exist");
+            File.Delete(Application.persistentDataPath + "/playerData.dat");
+        }
     }
 }
