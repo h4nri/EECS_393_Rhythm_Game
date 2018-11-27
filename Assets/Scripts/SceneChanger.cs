@@ -50,10 +50,6 @@ public class SceneChanger : MonoBehaviour{
     }
 
 
-    public void PauseToSettings()
-    {
-        SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
-    }
 
     //Instructions scene does not need to save its state, so it can just be addtive
     public void ToInstructions()
@@ -68,8 +64,14 @@ public class SceneChanger : MonoBehaviour{
 
     public void ToSettings()
     {
-		SceneManager.LoadScene("Settings");
-	}
+        SceneManager.LoadScene("Settings");
+        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Settings"));
+    }
+
+    public void UnloadSettings()
+    {
+        SceneManager.UnloadScene("Settings");
+    }
 
     public void ToMainMenu()
     {
@@ -93,6 +95,7 @@ public class SceneChanger : MonoBehaviour{
 
 	public void PlayTwinkleTwinkleLittleStar()
     {
-		SceneManager.LoadScene("Twinkle Twinkle Little Star");
+        //DontDestroyOnLoad(transform.gameObject);
+        SceneManager.LoadScene("Twinkle Twinkle Little Star");
 	}
 }
