@@ -1,6 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
 
 public class LevelBase : MonoBehaviour
 {
@@ -72,8 +74,19 @@ public class LevelBase : MonoBehaviour
         return FallSpeed;
     }
 
-    public void PlayCurrentLevel() 
+    public void SaveCurrentLevel() 
     {
+        CustomLevelData.LevelData.CustomLevels.Add(LevelName);
+
+        // Add all the current notes to a GameObject
+        GameObject[] notes;
+        notes = GameObject.FindGameObjectsWithTag("Note");
+        CustomLevelData.LevelData.Notes.Add(notes);
+
+        // Load the play version of this level 
+        CustomLevelData.LevelData.Save();
+
 
     }
+
 }

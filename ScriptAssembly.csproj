@@ -61,14 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CustomLevelData.cs" />
+    <Compile Include="Assets\Scripts\CustomLevelManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GradeSprite.cs" />
     <Compile Include="Assets\Scripts\HoldLine.cs" />
     <Compile Include="Assets\Scripts\KeyboardTimingNote.cs" />
     <Compile Include="Assets\Scripts\Leaderboards.cs" />
     <Compile Include="Assets\Scripts\LevelBase.cs" />
-    <Compile Include="Assets\Scripts\LevelBaseCamera.cs" />
-    <Compile Include="Assets\Scripts\LevelCreateSoundManger.cs" />
     <Compile Include="Assets\Scripts\LevelEditor.cs" />
     <Compile Include="Assets\Scripts\LevelText.cs" />
     <Compile Include="Assets\Scripts\Link.cs" />

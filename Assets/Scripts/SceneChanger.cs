@@ -69,4 +69,20 @@ public class SceneChanger : MonoBehaviour{
     {
         SceneManager.LoadScene("Level Base");
     }
+
+    public void ToCustomLevelSelect()
+    {
+        CustomLevelData.LevelData.Load();
+        SceneManager.LoadScene("Custom Level Select");
+    }
+
+    public void ToLevelEditor()
+    {
+        SceneManager.LoadScene("Level Editor");
+    }
+
+    public void ToPlayCustomLevel()
+    {
+        SceneManager.LoadScene("Custom Level Play");
+    }
 }
