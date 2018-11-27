@@ -58,7 +58,10 @@ public class SettingsManager : MonoBehaviour {
             isPaused = false;
         }
 
-        else;
+        else
+        {
+            ;
+        }
     }
     
     //Pause Menu and Settings functions

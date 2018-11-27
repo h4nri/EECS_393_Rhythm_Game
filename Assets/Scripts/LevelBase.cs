@@ -80,10 +80,24 @@ public class LevelBase : MonoBehaviour
 
         // Add all the current notes to a GameObject
         GameObject[] notes;
-        notes = GameObject.FindGameObjectsWithTag("Note");
-        CustomLevelData.LevelData.Notes.Add(notes);
+        notes = GameObject.FindGameObjectsWithTag("BaseNote");
 
-        // Load the play version of this level 
+        NoteData[] NoteDatas = new NoteData[notes.Length];
+        int count = 0;
+        foreach(GameObject note in notes){
+            Vector3 position = note.transform.position;
+            Quaternion rotation = note.transform.rotation;
+            Vector3 scaling = note.transform.localScale;
+            NoteData data = new NoteData(position.x, position.y, position.z,
+                                         rotation.x, rotation.y, rotation.z, rotation.w,
+                                         scaling.x, scaling.y, scaling.z);
+            NoteDatas[count] = data;
+            count++;
+        }
+
+        CustomLevelData.LevelData.Notes.Add(NoteDatas);
+
+        // Save the newly updated data
         CustomLevelData.LevelData.Save();
 
         // Go back to the Level Select
@@ -91,5 +105,7 @@ public class LevelBase : MonoBehaviour
 
 
     }
+
+
 
 }

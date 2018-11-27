@@ -5,15 +5,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 
-
-
 public class CustomLevelData : MonoBehaviour
 {
     // Pseudo Singleton Object for the player's level data
     public static CustomLevelData LevelData;
 
     public List<string> CustomLevels { get; set; }
-    public List<GameObject[]> Notes { get; set; }
+    public List<NoteData[]> Notes {get; set;}
 
     public float levels;
     public float notes;
@@ -24,7 +22,7 @@ public class CustomLevelData : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             LevelData = this;
             LevelData.CustomLevels = new List<string>();
-            LevelData.Notes = new List<GameObject[]>();
+            LevelData.Notes = new List<NoteData[]>();
         }
         else if (LevelData != this)
         {
@@ -37,45 +35,30 @@ public class CustomLevelData : MonoBehaviour
     public void Save()
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/playerdata.dat");
+        FileStream file = File.Create(Application.persistentDataPath + "/playerData.dat");
         PlayerData data = new PlayerData();
-        data.levels = 100F;
-        data.notes = 200F;
+        data.CustomLevels = this.CustomLevels;
+        data.Notes = this.Notes;
         formatter.Serialize(file, data);
-
         file.Close();
-        
-
     }
 
-    public void Load()
-    {
-        if(File.Exists(Application.persistentDataPath + "/playerdata.dat")) 
+    public void Load() {
+        print("filepath");
+        print(Application.persistentDataPath);
+        if (File.Exists(Application.persistentDataPath + "/playerData.dat")) 
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerdata.dat", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/playerData.dat", FileMode.Open);
             PlayerData data = (PlayerData)formatter.Deserialize(file);
-            file.Close();
-
-            levels = data.levels;
-            notes = data.notes;
+            this.CustomLevels = data.CustomLevels;
+            this.Notes = data.Notes;
         }
     }
 
-
-
 }
 
-[Serializable]
-class PlayerData 
-{
-    //public List<string> CustomLevels;
-    //public List<float[][]> Notes;
-
-    public float levels;
-    public float notes;
 
 
-}
 
 

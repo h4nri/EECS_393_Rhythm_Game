@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Note.cs" />
     <Compile Include="Assets\Scripts\NoteData.cs" />
+    <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\SettingsManager.cs" />
