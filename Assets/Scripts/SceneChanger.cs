@@ -91,4 +91,11 @@ public class SceneChanger : MonoBehaviour{
         // TODO change this to actually load the current level. 
         SceneManager.LoadScene("Level Editor");
     }
+
+    public void BackToLevelSelect()
+    {
+        CustomLevelData.LevelData.Save();
+        SceneManager.LoadScene("Level Select");
+
+    }
 }
