@@ -13,10 +13,6 @@ public class LevelBase : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int FallSpeed = CalculateFallSpeed(Difficulty);
-        print("Fallspeed");
-        print(FallSpeed);
-
-
         double BPS = (double)BPM / (double)60;
         DistanceBetweenNotes = (float) (1 / (BPS / FallSpeed));
 
@@ -25,17 +21,15 @@ public class LevelBase : MonoBehaviour {
         audioSource.clip = Resources.Load<AudioClip>(SongName);
 
         double length = audioSource.clip.length;
-        int count = 0;
+
         for (float i = 0; i < length; i = i + DistanceBetweenNotes)
         {
-            count++;
             GameObject note = Instantiate(Resources.Load("Prefabs/Basic Notes/Base Note")) as GameObject;
             note.transform.Translate(0 , i, 0);
         }
 
-        Vector3 x = Input.mousePosition;
-        Vector2 scroll = Input.mouseScrollDelta;
-        print(count);
+        //Vector3 x = Input.mousePosition;
+        //Vector2 scroll = Input.mouseScrollDelta;
     }
 	
 
@@ -69,5 +63,10 @@ public class LevelBase : MonoBehaviour {
         }
 
         return FallSpeed;
+    }
+
+    public void PlayCurrentLevel() 
+    {
+
     }
 }
