@@ -86,6 +86,9 @@ public class LevelBase : MonoBehaviour
         // Load the play version of this level 
         CustomLevelData.LevelData.Save();
 
+        // Go back to the Level Select
+        SceneManager.LoadScene("Custom Level Select");
+
 
     }
 

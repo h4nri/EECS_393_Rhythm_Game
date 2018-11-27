@@ -23,6 +23,8 @@ public class CustomLevelData : MonoBehaviour
         if (LevelData == null) {
             DontDestroyOnLoad(gameObject);
             LevelData = this;
+            LevelData.CustomLevels = new List<string>();
+            LevelData.Notes = new List<GameObject[]>();
         }
         else if (LevelData != this)
         {

@@ -85,4 +85,10 @@ public class SceneChanger : MonoBehaviour{
     {
         SceneManager.LoadScene("Custom Level Play");
     }
+
+    public void ToEditCustomLevel() 
+    {
+        // TODO change this to actually load the current level. 
+        SceneManager.LoadScene("Level Editor");
+    }
 }
