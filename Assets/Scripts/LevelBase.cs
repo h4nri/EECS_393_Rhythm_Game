@@ -32,12 +32,18 @@ public class LevelBase : MonoBehaviour
         double beats = BPS * length; // length in beats
 
         int NumberNotes = (int)(beats * NotesPerBeat);
-        int number = 0; 
-        for (float i = NotesPerBeat; i < length * (float)FallSpeed; i = i + NotesPerBeat/(float)FallSpeed)
+        int number = 0;
+        for (float i = NotesPerBeat; i < length * (float)FallSpeed; i = i + NotesPerBeat / (float)FallSpeed)
         {
+            //generate random placement numbers for the notes
+            int lane = Random.Range(0, 8);
+            int space = Random.Range(1, 4);
             number++;
             GameObject note = Instantiate(Resources.Load("Prefabs/Basic Notes/Base Note")) as GameObject;
-            note.transform.Translate(0 , i, 0);
+            note.transform.Translate(lane, i, space);
+
+            //adding box collider for testing
+            //BoxCollider boxCollider = note.AddComponent<BoxCollider>();
         }
         print("COUNT = " + number);
         //Vector3 x = Input.mousePosition;
@@ -54,9 +60,37 @@ public class LevelBase : MonoBehaviour
         }
 
     }
-	
 
-	void OnUpdate () {
+   /* void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Mouse is down");
+
+            RaycastHit hitInfo = new RaycastHit();
+            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+            if (hit)
+            {
+                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
+                if (hitInfo.transform.gameObject.tag == "Construction")
+                {
+                    Debug.Log("It's working!");
+                }
+                else
+                {
+                    Debug.Log("nopz");
+                }
+            }
+            else
+            {
+                Debug.Log("No hit");
+            }
+            Debug.Log("Mouse is down");
+        }
+    }*/
+
+
+    void OnUpdate () {
 
         //GameObject[] AllNotes = GameObject.FindGameObjectsWithTag("BaseNote");
         //foreach (GameObject o in AllNotes)
