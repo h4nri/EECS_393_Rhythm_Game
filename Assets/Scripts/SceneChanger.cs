@@ -86,6 +86,9 @@ public class SceneChanger : MonoBehaviour{
     public void ToPlayCustomLevel()
     {
         // TODO change this to actulaly input the custom informaiton
+        CustomLevelData.LevelData.CustomLevelIsActive = true;
+        CustomLevelData.LevelData.UpdateValue();
+
         SceneManager.LoadScene("Custom Level Play");
     }
 

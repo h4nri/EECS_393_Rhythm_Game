@@ -16,7 +16,7 @@ public class SongList : MonoBehaviour {
     void Start()
     {
         SongBPMs = new List<int> {
-                108,
+                51,
                 98,
                 140,
                 149

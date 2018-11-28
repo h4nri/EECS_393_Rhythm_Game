@@ -17,6 +17,7 @@ public class CustomLevelData : MonoBehaviour
     Dropdown Dropdown;
     public string SongName { get; set; }
     public string LevelName { get; set; }
+    public bool CustomLevelIsActive { get; set; }
 
     // Pseudo Singleton Object for the player's level data
     void Awake()
@@ -27,6 +28,7 @@ public class CustomLevelData : MonoBehaviour
             LevelData.CustomLevels = new List<string>();
             LevelData.Notes = new List<NoteData[]>();
             LevelData.SongNames = new List<string>();
+            LevelData.CustomLevelIsActive = false;
         }
         else if (LevelData != this)
         {
@@ -36,11 +38,13 @@ public class CustomLevelData : MonoBehaviour
 
     }
 
+
     public void UpdateValue()
     {
 
         Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();
         LevelName = CustomLevelData.LevelData.CustomLevels[Dropdown.value];
+        print("Curren count = " + CustomLevelData.LevelData.SongNames.Count);
         SongName = CustomLevelData.LevelData.SongNames[Dropdown.value];
 
     }
@@ -65,6 +69,8 @@ public class CustomLevelData : MonoBehaviour
             PlayerData data = (PlayerData)formatter.Deserialize(file);
             this.CustomLevels = data.CustomLevels;
             this.Notes = data.Notes;
+            this.SongNames = data.SongNames;
+            file.Close();
         }
     }
 
@@ -75,6 +81,7 @@ public class CustomLevelData : MonoBehaviour
             File.Delete(Application.persistentDataPath + "/playerData.dat");
             LevelData.CustomLevels = new List<string>();
             LevelData.Notes = new List<NoteData[]>();
+            LevelData.SongNames = new List<string>();
 
             Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();
             Dropdown.ClearOptions();

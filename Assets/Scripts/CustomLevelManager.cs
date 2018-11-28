@@ -10,9 +10,7 @@ public class CustomLevelManager : MonoBehaviour {
 
     void Start()
     {
-        Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();
-        Dropdown.ClearOptions();
-        Dropdown.AddOptions(CustomLevelData.LevelData.CustomLevels);
+        UpdateDropdown();
     }
 
     public void UpdateDropdown() 
