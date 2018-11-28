@@ -36,11 +36,20 @@ public class LevelBase : MonoBehaviour
         for (float i = NotesPerBeat; i < length * (float)FallSpeed; i = i + NotesPerBeat / (float)FallSpeed)
         {
             //generate random placement numbers for the notes
-            int lane = Random.Range(0, 8);
+            int lane = Random.Range(1, 8);
             int space = Random.Range(1, 4);
             number++;
             GameObject note = Instantiate(Resources.Load("Prefabs/Basic Notes/Base Note")) as GameObject;
-            note.transform.Translate(lane, i, space);
+            note.transform.Translate(lane, i, 0);
+            /* if (i == NotesPerBeat)
+             {
+                 note.transform.Translate(lane, i, 0);
+             }
+
+             else
+             {
+                 note.transform.Translate(lane, i, space);
+             }*/
 
             //adding box collider for testing
             //BoxCollider boxCollider = note.AddComponent<BoxCollider>();

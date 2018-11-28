@@ -866,6 +866,86 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83f0ef1bd1d6e1149a3b63763ba48009, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &300127691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300127692}
+  - component: {fileID: 300127694}
+  - component: {fileID: 300127693}
+  m_Layer: 5
+  m_Name: InstructionsText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &300127692
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300127691}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.065075, y: 1.065075, z: 1.065075}
+  m_Children: []
+  m_Father: {fileID: 798841008}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.002655, y: -585.3}
+  m_SizeDelta: {x: 1802.7, y: 1203}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &300127693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300127691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4f9bbe7f39a173f4f94314e039cb9ca6, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 150
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Rhythm Master controls work as follows. \n\nThe QWER and SPACE keys control
+    note hitting on the leftmost 5 lanes on the screen, the remaining lanes work on
+    the mouse click. \n\nA perfect note hit occurs when the hit takes place as the
+    middle of the incoming note reaches the bar at the bottom of the screen. Whenever
+    the hit occurs else where it will be scored as great, good, bad or miss if the
+    note isn't hit when it is in the bar. "
+--- !u!222 &300127694
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300127691}
+  m_CullTransparentMesh: 0
 --- !u!1001 &304438177
 Prefab:
   m_ObjectHideFlags: 0
@@ -2793,6 +2873,7 @@ RectTransform:
   m_Children:
   - {fileID: 1367469926}
   - {fileID: 1277666699}
+  - {fileID: 300127692}
   m_Father: {fileID: 825026237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4974,7 +5055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.036743, y: -725.4}
+  m_AnchoredPosition: {x: -31, y: -804}
   m_SizeDelta: {x: -1668.9, y: -1005.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367469927
