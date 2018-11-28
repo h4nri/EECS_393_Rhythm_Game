@@ -13,8 +13,7 @@ public class CustomLevelData : MonoBehaviour
     public List<string> CustomLevels { get; set; }
     public List<NoteData[]> Notes {get; set;}
 
-    public float levels;
-    public float notes;
+    public List<string> SongNames { get; set; }
 
     void Awake()
     {
@@ -56,12 +55,6 @@ public class CustomLevelData : MonoBehaviour
         }
     }
 
-    public void ClearCustomLevels() {
-       
-            print("I exist");
-            File.Delete(Application.persistentDataPath + "/playerData.dat");
-        
-    }
 
 }
 

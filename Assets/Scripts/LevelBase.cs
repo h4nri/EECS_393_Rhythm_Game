@@ -95,6 +95,7 @@ public class LevelBase : MonoBehaviour
             count++;
         }
 
+        CustomLevelData.LevelData.SongNames.Add(SongName);
         CustomLevelData.LevelData.Notes.Add(NoteDatas);
 
         // Save the newly updated data
