@@ -50,7 +50,13 @@ public class SoundManager : MonoBehaviour {
 
             audioSource = GetComponent<AudioSource>();
             audioSource.clip = Resources.Load<AudioClip>(SongName);
-      
+
+            GameManager gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+            gameManager.speed = CustomLevelData.LevelData.FallSpeeds[SongIndex];
+
+
+
+
         }
     }
 
@@ -61,6 +67,7 @@ public class SoundManager : MonoBehaviour {
         scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 		clipLength = audioClip.length;
         audioSource.Play();
+        print("I ran");
 		//print("Clip Length: " + clipLength);
 	}
 

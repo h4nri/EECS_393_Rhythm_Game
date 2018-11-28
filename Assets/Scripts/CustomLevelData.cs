@@ -12,6 +12,7 @@ public class CustomLevelData : MonoBehaviour
     public List<string> CustomLevels { get; set; }
     public List<NoteData[]> Notes {get; set;}
     public List<string> SongNames { get; set; }
+    public List<int> FallSpeeds { get; set; }
 
     // Current Song and Level name
     Dropdown Dropdown;
@@ -29,6 +30,7 @@ public class CustomLevelData : MonoBehaviour
             LevelData.Notes = new List<NoteData[]>();
             LevelData.SongNames = new List<string>();
             LevelData.CustomLevelIsActive = false;
+            LevelData.FallSpeeds = new List<int>();
         }
         else if (LevelData != this)
         {
@@ -56,6 +58,9 @@ public class CustomLevelData : MonoBehaviour
         PlayerData data = new PlayerData();
         data.CustomLevels = this.CustomLevels;
         data.Notes = this.Notes;
+        data.SongNames = this.SongNames;
+        data.FallSpeeds = this.FallSpeeds;
+
         formatter.Serialize(file, data);
         file.Close();
     }
@@ -70,6 +75,7 @@ public class CustomLevelData : MonoBehaviour
             this.CustomLevels = data.CustomLevels;
             this.Notes = data.Notes;
             this.SongNames = data.SongNames;
+            this.FallSpeeds = data.FallSpeeds;
             file.Close();
         }
     }
@@ -82,6 +88,7 @@ public class CustomLevelData : MonoBehaviour
             LevelData.CustomLevels = new List<string>();
             LevelData.Notes = new List<NoteData[]>();
             LevelData.SongNames = new List<string>();
+            LevelData.FallSpeeds = new List<int>();
 
             Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();
             Dropdown.ClearOptions();

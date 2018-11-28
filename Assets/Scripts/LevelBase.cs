@@ -10,31 +10,36 @@ public class LevelBase : MonoBehaviour
     private int BPM = LevelEditor.BPM;
     private string SongName = LevelEditor.SongChoice;
     private int Difficulty = LevelEditor.Difficulty;
-    private float DistanceBetweenNotes;
+    private float NotesPerBeat;
     AudioSource audioSource;
     public string LevelName { get; set;}
+    int FallSpeed;
 
     // Use this for initialization
     void Start () {
 
         // Calculating based off of formula in README
-        int FallSpeed = CalculateFallSpeed(Difficulty);
+        FallSpeed = CalculateFallSpeed(Difficulty);
         double BPS = (double)BPM / (double)60;
-        DistanceBetweenNotes = (float) (1 / (BPS / FallSpeed));
+        NotesPerBeat = (float) (1 / (BPS / FallSpeed)); // units = notes/beat
 
         // Getting correct audiosource and length in seconds
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>(SongName);
 
         // length of audio in seconds
-        double length = audioSource.clip.length;
+        double length = audioSource.clip.length; // length in seconds
+        double beats = BPS * length; // length in beats
 
-        for (float i = DistanceBetweenNotes * 2; i < length; i = i + DistanceBetweenNotes)
+        int NumberNotes = (int)(beats * NotesPerBeat);
+        int number = 0; 
+        for (float i = NotesPerBeat; i < length * FallSpeed; i = i + NotesPerBeat/FallSpeed)
         {
+            number++;
             GameObject note = Instantiate(Resources.Load("Prefabs/Basic Notes/Base Note")) as GameObject;
             note.transform.Translate(0 , i, 0);
         }
-
+        print("COUNT = " + number);
         //Vector3 x = Input.mousePosition;
         //Vector2 scroll = Input.mouseScrollDelta;
 
@@ -69,17 +74,17 @@ public class LevelBase : MonoBehaviour
         int FallSpeed;
         if (diff == 0)
         {
-            FallSpeed = 5;
+            FallSpeed = 1;
             LevelName = "Easy";
         }
         else if (diff == 1)
         {
-            FallSpeed = 4;
+            FallSpeed = 2;
             LevelName = "Medium";
         }
         else
         {
-            FallSpeed = 3;
+            FallSpeed = 4;
             LevelName = "Hard";
         }
 
@@ -88,7 +93,6 @@ public class LevelBase : MonoBehaviour
 
     public void SaveCurrentLevel() 
     {
-        CustomLevelData.LevelData.CustomLevels.Add(LevelName);
 
         // Add all the current notes to a GameObject
         GameObject[] notes;
@@ -107,8 +111,10 @@ public class LevelBase : MonoBehaviour
             count++;
         }
 
+        CustomLevelData.LevelData.CustomLevels.Add(LevelName);
         CustomLevelData.LevelData.SongNames.Add(SongName);
         CustomLevelData.LevelData.Notes.Add(NoteDatas);
+        CustomLevelData.LevelData.FallSpeeds.Add(FallSpeed);
 
         // Save the newly updated data
         CustomLevelData.LevelData.Save();
