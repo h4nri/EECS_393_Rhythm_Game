@@ -15,13 +15,6 @@ public class CustomLevelManager : MonoBehaviour {
         Dropdown.AddOptions(CustomLevelData.LevelData.CustomLevels);
     }
 
-
-    //public void AddPrefabsToPlay() {
-    //    Scene scene = SceneManager.GetSceneByName("Custom Level Play");
-    //    SceneManager.SetActiveScene(scene);
-
-    //}
-
     public void UpdateDropdown() 
     {
         Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();

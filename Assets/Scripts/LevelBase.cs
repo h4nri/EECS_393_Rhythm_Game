@@ -16,17 +16,20 @@ public class LevelBase : MonoBehaviour
 
     // Use this for initialization
     void Start () {
+
+        // Calculating based off of formula in README
         int FallSpeed = CalculateFallSpeed(Difficulty);
         double BPS = (double)BPM / (double)60;
         DistanceBetweenNotes = (float) (1 / (BPS / FallSpeed));
 
+        // Getting correct audiosource and length in seconds
         audioSource = GetComponent<AudioSource>();
-        //audioSource.clip = Resources.Load<AudioClip>(SongName);
         audioSource.clip = Resources.Load<AudioClip>(SongName);
 
+        // length of audio in seconds
         double length = audioSource.clip.length;
 
-        for (float i = 0; i < length; i = i + DistanceBetweenNotes)
+        for (float i = DistanceBetweenNotes * 2; i < length; i = i + DistanceBetweenNotes)
         {
             GameObject note = Instantiate(Resources.Load("Prefabs/Basic Notes/Base Note")) as GameObject;
             note.transform.Translate(0 , i, 0);
@@ -34,7 +37,16 @@ public class LevelBase : MonoBehaviour
 
         //Vector3 x = Input.mousePosition;
         //Vector2 scroll = Input.mouseScrollDelta;
+
+        // Naming the new level, making sure no duplicates
         LevelName = "Custom Level: " + SongName + " - " + LevelName;
+        string BaseName = LevelName;
+        int count = 1;
+        while (CustomLevelData.LevelData.CustomLevels.IndexOf(LevelName) != -1)
+        {
+            LevelName = BaseName + " " + count;
+            count++;
+        }
 
     }
 	

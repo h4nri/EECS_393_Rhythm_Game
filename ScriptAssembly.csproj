@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CustomLevelData.cs" />
     <Compile Include="Assets\Scripts\CustomLevelManager.cs" />
+    <Compile Include="Assets\Scripts\CustomLevelPrefabManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GradeSprite.cs" />
     <Compile Include="Assets\Scripts\HoldLine.cs" />
