@@ -18,13 +18,13 @@ public class SoundManager : MonoBehaviour {
 
     private void Awake()
     {
-        if(CustomLevelData.LevelData.CustomLevelIsActive) 
+        if (CustomLevelData.LevelData.CustomLevelIsActive)
         {
             SongName = CustomLevelData.LevelData.SongName;
             print("Song Name " + SongName);
             LevelName = CustomLevelData.LevelData.LevelName;
             print("Level Name : " + LevelName);
-            foreach(string n in CustomLevelData.LevelData.CustomLevels)
+            foreach (string n in CustomLevelData.LevelData.CustomLevels)
             {
                 print(CustomLevelData.LevelData.CustomLevels.IndexOf(n));
                 print(n);
@@ -58,6 +58,11 @@ public class SoundManager : MonoBehaviour {
 
 
         }
+        else
+        {
+            GameManager gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+            gameManager.speed = 2;
+        }
     }
 
     private void Start()
@@ -67,7 +72,6 @@ public class SoundManager : MonoBehaviour {
         scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
 		clipLength = audioClip.length;
         audioSource.Play();
-        print("I ran");
 		//print("Clip Length: " + clipLength);
 	}
 

@@ -40,7 +40,7 @@ public class LevelBase : MonoBehaviour
             int space = Random.Range(1, 4);
             number++;
             GameObject note = Instantiate(Resources.Load("Prefabs/Basic Notes/Base Note")) as GameObject;
-            note.transform.Translate(lane, i, 0);
+            note.transform.Translate(lane * 1.1F, i, 0);
             /* if (i == NotesPerBeat)
              {
                  note.transform.Translate(lane, i, 0);
@@ -54,7 +54,7 @@ public class LevelBase : MonoBehaviour
             //adding box collider for testing
             //BoxCollider boxCollider = note.AddComponent<BoxCollider>();
         }
-        print("COUNT = " + number);
+
         //Vector3 x = Input.mousePosition;
         //Vector2 scroll = Input.mouseScrollDelta;
 
