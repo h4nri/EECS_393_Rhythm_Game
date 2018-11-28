@@ -6,7 +6,7 @@ public class LevelEditor : MonoBehaviour {
 
     public static string SongChoice { get; set;}
     public static int Difficulty { get; set;}
-    public static int BPM { get; set;}
+    public static float BPM { get; set;}
 
 
     Dropdown SongDropdown;

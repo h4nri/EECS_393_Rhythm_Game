@@ -8,25 +8,23 @@ public class SongList : MonoBehaviour {
     //Create a List of new Dropdown options
     public static List<string> SongNames { get; set; }
 
-    public static List<int> SongBPMs { get; set; }
+    public static List<float> SongBPMs { get; set; }
 
     //This is the Dropdown
     Dropdown Dropdown;
 
     void Start()
     {
-        SongBPMs = new List<int> {
-                51,
-                98,
-                140,
-                149
+        SongBPMs = new List<float> {
+                108F,
+                91F, 
+                109F
         };
 
         SongNames = new List<string> {
                 "Twinkle Twinkle Little Star",
-                "Moonlight Sonata",
-                "Silent Night",
-                "Carol of the Bells"
+                "Back In Black",
+                "Walk This Way"
         };
 
         //Fetch the Dropdown GameObject the script is attached to

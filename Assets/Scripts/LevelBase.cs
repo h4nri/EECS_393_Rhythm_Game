@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelBase : MonoBehaviour
 {
 
-    private int BPM = LevelEditor.BPM;
+    private float BPM = LevelEditor.BPM;
     private string SongName = LevelEditor.SongChoice;
     private int Difficulty = LevelEditor.Difficulty;
     private float NotesPerBeat;
@@ -20,7 +20,7 @@ public class LevelBase : MonoBehaviour
 
         // Calculating based off of formula in README
         FallSpeed = CalculateFallSpeed(Difficulty);
-        double BPS = (double)BPM / (double)60;
+        double BPS = (double)BPM / 4 / (double)60;
         NotesPerBeat = (float) (1 / (BPS / FallSpeed)); // units = notes/beat
 
         // Getting correct audiosource and length in seconds
@@ -33,7 +33,7 @@ public class LevelBase : MonoBehaviour
 
         int NumberNotes = (int)(beats * NotesPerBeat);
         int number = 0; 
-        for (float i = NotesPerBeat; i < length * FallSpeed; i = i + NotesPerBeat/FallSpeed)
+        for (float i = NotesPerBeat; i < length * (float)FallSpeed; i = i + NotesPerBeat/(float)FallSpeed)
         {
             number++;
             GameObject note = Instantiate(Resources.Load("Prefabs/Basic Notes/Base Note")) as GameObject;
@@ -71,24 +71,24 @@ public class LevelBase : MonoBehaviour
 
     private int CalculateFallSpeed(int diff) 
     {
-        int FallSpeed;
+        int Speed;
         if (diff == 0)
         {
-            FallSpeed = 1;
+            Speed = 1;
             LevelName = "Easy";
         }
         else if (diff == 1)
         {
-            FallSpeed = 2;
+            Speed = 2;
             LevelName = "Medium";
         }
         else
         {
-            FallSpeed = 4;
+            Speed = 4;
             LevelName = "Hard";
         }
 
-        return FallSpeed;
+        return Speed;
     }
 
     public void SaveCurrentLevel() 
