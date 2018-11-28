@@ -952,7 +952,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 126386420}
-        m_MethodName: ToLevelEditor
+        m_MethodName: ToCustomLevelSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

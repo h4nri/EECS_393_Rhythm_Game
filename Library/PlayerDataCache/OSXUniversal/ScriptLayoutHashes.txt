@@ -1,6 +1,6 @@
 OSXStandalone
 PlayerPath?
-/Users/Kalli/Desktop/Rhythm Master 2.0.app
+/Users/Kalli/Desktop/Rhythm Master 2.1.app
 SceneListBegin?
 Assets/Scenes/Title.unity
 Assets/Scenes/Level Select.unity

@@ -106,41 +106,79 @@ public class SoundManager : MonoBehaviour {
 
     private string DetermineNoteType(float XPosition)
     {
-        if (XPosition.Equals(-3.3F)) // Blue Note 
-        {
-            return "Blue Note";
-        }
-        else if (XPosition.Equals(-2.2F)) // Cyan Note
-        {
-            return "Cyan Note";
-        }
-        else if (XPosition.Equals(-1.1F)) // Green Note
-        {
-            return "Green Note";
-        }
-        else if (XPosition.Equals(-4.4F)) // Indigo Note
+
+        if (XPosition <= -3.9F) // -4.4 Indigo  -4.4 + .5 = -3.9
         {
             return "Indigo Note";
         }
-        else if (XPosition.Equals(0F)) // Lime Note
+        else if (XPosition > -3.9F & XPosition <= -2.8F) // -3.3 Blue -3.3 + .5 = -2.8 
+        {
+            return "Blue Note";
+        }
+        else if (XPosition > -2.8F & XPosition <= -1.7F) // -2.2 Cyan -2.2 + .5 = -1.7
+        {
+            return "Cyan Note";
+        }
+        else if (XPosition > -1.7 & XPosition <= -.6F) // -1.1 Green -1.1 +.5 = -.6
+        {
+            return "Green Note";
+        }
+        else if (XPosition > -.6F & XPosition <= .5F) // 0 Lime                .5
         {
             return "Lime Note";
         }
-        else if (XPosition.Equals(3.3F)) // Orange Note
-        {
-            return "Orange Note";
-        }
-        else if (XPosition.Equals(4.4F)) // Red-Orange Note
-        {
-            return "Red-Orange Note";
-        }
-        else if (XPosition.Equals(2.2F)) // Tangerine Note
-        {
-            return "Tangerine Note";
-        }
-        else  // Yellow Note
+        else if (XPosition > .5F & XPosition <= 1.6F) // 1.1 Yellow          1.6
         {
             return "Yellow Note";
         }
+        else if (XPosition > 1.6F & XPosition <= 2.7F) // 2.2 Tangerine       2.7
+        {
+            return "Tangerine Note";
+        }
+        else if (XPosition > 2.7F & XPosition <= 3.8F) // 3.3 Orange      3.8
+        {
+            return "Orange Note";
+        }
+        else                             // 4.4 Red-Orange
+        {
+            return "Red-Orange Note";
+        }
+
+        //if (XPosition.Equals(-3.3F)) // Blue Note 
+        //{
+        //    return "Blue Note";
+        //}
+        //else if (XPosition.Equals(-2.2F)) // Cyan Note
+        //{
+        //    return "Cyan Note";
+        //}
+        //else if (XPosition.Equals(-1.1F)) // Green Note
+        //{
+        //    return "Green Note";
+        //}
+        //else if (XPosition.Equals(-4.4F)) // Indigo Note
+        //{
+        //    return "Indigo Note";
+        //}
+        //else if (XPosition.Equals(0F)) // Lime Note
+        //{
+        //    return "Lime Note";
+        //}
+        //else if (XPosition.Equals(3.3F)) // Orange Note
+        //{
+        //    return "Orange Note";
+        //}
+        //else if (XPosition.Equals(4.4F)) // Red-Orange Note
+        //{
+        //    return "Red-Orange Note";
+        //}
+        //else if (XPosition.Equals(2.2F)) // Tangerine Note
+        //{
+        //    return "Tangerine Note";
+        //}
+        //else  // Yellow Note
+        //{
+        //    return "Yellow Note";
+        //}
     }
 }
