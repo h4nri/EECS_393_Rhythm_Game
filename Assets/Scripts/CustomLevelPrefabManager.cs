@@ -21,12 +21,61 @@ public class CustomLevelPrefabManager : MonoBehaviour {
         // Instantiate each note that was saved 
         foreach(NoteData note in Notes) 
         {
+            Vector3 Position = note.GetPosition();
+            Vector3 Scaling = note.GetScale();
+            Quaternion Rotation = note.GetRotation();
+
+            float XPosition = Position.x;
+            string Type = DetermineNoteType(XPosition);
+            Instantiate(Resources.Load(Type), Position, Rotation);
+
 
         }
-	}
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.clip = Resources.Load<AudioClip>(SongName);
+        if(audioSource.clip != null) {
+            print("clip loaded");
+        }
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	private string DetermineNoteType(float XPosition)
+    {
+        if (XPosition.Equals(-3.3F)) // Blue Note 
+        {
+            return "Blue Note";
+        }
+        else if (XPosition.Equals(-2.2F)) // Cyan Note
+        {
+            return "Cyan Note";
+        }
+        else if (XPosition.Equals(-1.1F)) // Green Note
+        {
+            return "Green Note";
+        }
+        else if (XPosition.Equals(-4.4F)) // Indigo Note
+        {
+            return "Indigo Note";
+        }
+        else if (XPosition.Equals(0F)) // Lime Note
+        {
+            return "Lime Note";
+        }
+        else if (XPosition.Equals(3.3F)) // Orange Note
+        {
+            return "Orange Note";
+        }
+        else if (XPosition.Equals(4.4F)) // Red-Orange Note
+        {
+            return "Red-Orange Note";
+        }
+        else if (XPosition.Equals(2.2F)) // Tangerine Note
+        {
+            return "Tangerine Note";
+        }
+        else  // Yellow Note
+        {
+            return "Yellow Note";
+        }
+    }
 }

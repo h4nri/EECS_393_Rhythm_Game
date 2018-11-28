@@ -60,19 +60,19 @@ public class NoteData {
 
     }
 
-    public Vector3 GetPosition (NoteData note) 
+    public Vector3 GetPosition () 
     {
-        return new Vector3(note.pos_x, note.pos_y, note.pos_z);
+        return new Vector3(pos_x, pos_y, pos_z);
     }
 
-    public Quaternion GetRotation(NoteData note)
+    public Quaternion GetRotation()
     {
-        return new Quaternion(note.rot_x, note.rot_y, note.rot_z, note.rot_w);
+        return new Quaternion(rot_x, rot_y, rot_z, rot_w);
     }
 
-    public Vector3 GetScale (NoteData note) 
+    public Vector3 GetScale () 
     {
-        return new Vector3(note.sca_x, note.sca_y, note.sca_z);
+        return new Vector3(sca_x, sca_y, sca_z);
     }
 
 
