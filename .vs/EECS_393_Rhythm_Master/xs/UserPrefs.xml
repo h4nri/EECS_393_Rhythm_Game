@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{7D080B76-DCBF-EBFD-4789-D7E27E738932}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CustomLevelManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneChanger.cs">
     <Files>
       <File FileName="Assets/Scripts/CustomLevelData.cs" Line="16" Column="48" />
       <File FileName="Assets/Scripts/LevelBase.cs" Line="101" Column="39" />

@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-
+using UnityEngine.UI;
 
 public class CustomLevelData : MonoBehaviour
 {
-    // Pseudo Singleton Object for the player's level data
     public static CustomLevelData LevelData;
 
     public List<string> CustomLevels { get; set; }
     public List<NoteData[]> Notes {get; set;}
-
     public List<string> SongNames { get; set; }
 
+    // Current Song and Level name
+    Dropdown Dropdown;
+    public string SongName { get; set; }
+    public string LevelName { get; set; }
+
+    // Pseudo Singleton Object for the player's level data
     void Awake()
     {
         if (LevelData == null) {
@@ -22,12 +26,22 @@ public class CustomLevelData : MonoBehaviour
             LevelData = this;
             LevelData.CustomLevels = new List<string>();
             LevelData.Notes = new List<NoteData[]>();
+            LevelData.SongNames = new List<string>();
         }
         else if (LevelData != this)
         {
             Destroy(gameObject);
         }
 
+
+    }
+
+    public void UpdateValue()
+    {
+
+        Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();
+        LevelName = CustomLevelData.LevelData.CustomLevels[Dropdown.value];
+        SongName = CustomLevelData.LevelData.SongNames[Dropdown.value];
 
     }
 
@@ -42,9 +56,8 @@ public class CustomLevelData : MonoBehaviour
         file.Close();
     }
 
-    public void Load() {
-        print("filepath");
-        print(Application.persistentDataPath);
+    public void Load() 
+    {
         if (File.Exists(Application.persistentDataPath + "/playerData.dat")) 
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -52,6 +65,21 @@ public class CustomLevelData : MonoBehaviour
             PlayerData data = (PlayerData)formatter.Deserialize(file);
             this.CustomLevels = data.CustomLevels;
             this.Notes = data.Notes;
+        }
+    }
+
+    public void Clear()
+    {
+        if (File.Exists(Application.persistentDataPath + "/playerData.dat"))
+        {
+            File.Delete(Application.persistentDataPath + "/playerData.dat");
+            LevelData.CustomLevels = new List<string>();
+            LevelData.Notes = new List<NoteData[]>();
+
+            Dropdown = GameObject.FindGameObjectWithTag("Custom Song Dropdown").GetComponent<Dropdown>();
+            Dropdown.ClearOptions();
+            Dropdown.AddOptions(CustomLevelData.LevelData.CustomLevels);
+
         }
     }
 

@@ -104,10 +104,6 @@ public class SceneChanger : MonoBehaviour{
 
     public void ClearCustomLevels()
     {
-        if (File.Exists(Application.persistentDataPath + "/playerData.dat"))
-        {
-            print("I exist");
-            File.Delete(Application.persistentDataPath + "/playerData.dat");
-        }
+        CustomLevelData.LevelData.Clear();
     }
 }
