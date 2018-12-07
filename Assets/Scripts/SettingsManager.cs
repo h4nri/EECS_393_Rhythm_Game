@@ -126,6 +126,8 @@ public class SettingsManager : MonoBehaviour {
     }
 
     //mouse sensitivity settings
+    /* Functionality was tested but no change in mouse movement speed was observed, so it was omitted from final implementation
+     */
     public void SetMouseSensitivity(float sensitivity)
     {
         Vector2 mouseMovement = new Vector2(Input.GetAxisRaw("Mouse X") * sensitivity, Input.GetAxisRaw("Mouse Y") * sensitivity);

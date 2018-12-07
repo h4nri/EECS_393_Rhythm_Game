@@ -21,14 +21,6 @@ public class SceneChanger : MonoBehaviour{
         string sceneName = PlayerPrefs.GetString("lastLoadedScene");
 
         SceneManager.LoadScene(sceneName);
-
-        //TODO: Fix bug that makes it so that when returning from settings or instructions the pause menu is not active.
-        //Check if game is paused to set the correct active panel (pause menu)
-        //if (SettingsManager.isPaused) 
-        //{
-         //   GameObject pauseMenu;
-        //    pauseMenu.SetActive(true);
-       // }
  
     }
 

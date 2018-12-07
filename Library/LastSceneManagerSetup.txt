@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Custom Level Select.unity
+- path: Assets/Scenes/Levels/Twinkle Twinkle Little Star.unity
   isLoaded: 1
   isActive: 1
